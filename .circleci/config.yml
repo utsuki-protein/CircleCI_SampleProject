@@ -7,9 +7,10 @@ jobs:
       steps:
         run: echo "build step"
   test:
-      machine:
+      docker:
         - image: circleci/python:3.6.1
       steps:
+        run: checkout
         run: echo "test step"
 
 workflow:
