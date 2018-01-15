@@ -1,6 +1,7 @@
 # -*- coding:utf-8 -*-
 
-# add comment
+
+# add comments
 def addition(a, b):
     c = a + b
     return c
