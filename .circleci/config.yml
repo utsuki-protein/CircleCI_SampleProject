@@ -1,1 +1,19 @@
+＃ Python3.6 CircleCI 2.0設定ファイル
+＃
+＃詳細はhttps://circleci.com/docs/1.0/language-python/をご覧ください。
+＃
 
+machine:
+  python:
+    version: 3.6.1
+
+general:
+  branches:
+    only:
+      - master
+
+test:
+  pre:
+    echo "--------------unittest start--------------"
+  post:
+    - ./manage.py; python manage.py --no-input
