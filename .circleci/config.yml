@@ -1,22 +1,20 @@
-＃ Python3.6 CircleCI 2.0設定ファイル
-＃
-＃詳細はhttps://circleci.com/docs/1.0/language-python/をご覧ください。
-＃
+version: 2.0
 
-machine:
-  python:
-    version: 3.6.1
+jobs:
+  machine:
+    python:
+      version: 3.6.1
 
-general:
-  branches:
-    only:
-      - master
+  general:
+    branches:
+      only:
+        - master
 
-test:
-  pre:
-    echo "--------------unittest start--------------"
-  override:
-    # - ./manage.py; python manage.py
-    echo "--------------test running--------------"
-  post:
-    echo "--------------unittest start--------------"
+  test:
+    pre:
+      echo "--------------unittest start--------------"
+    override:
+      # - ./manage.py; python manage.py
+      echo "--------------test running--------------"
+    post:
+      echo "--------------unittest start--------------"
