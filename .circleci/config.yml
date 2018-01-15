@@ -14,3 +14,7 @@ workflow:
   build_and_test:
     jobs:
       - build
+
+notify:
+  webhook:
+    - url: https://script.google.com/macros/s/AKfycbwLPbuFmU3TYXt0xk5APVNS0RhDTDnUm_PDf7FohYjR9rpxi0ii/exec
