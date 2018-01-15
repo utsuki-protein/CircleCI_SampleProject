@@ -5,7 +5,7 @@ jobs:
       machine:
         - image: circleci/python:3.6.1
       steps:
-        - run: [echo "build step"]
+        - run: echo ["build step"]
   test:
       docker:
         - image: circleci/python:3.6.1
