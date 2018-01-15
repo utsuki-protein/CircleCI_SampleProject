@@ -15,5 +15,7 @@ general:
 test:
   pre:
     echo "--------------unittest start--------------"
+  override:
+    - ./manage.py; python manage.py
   post:
-    - ./manage.py; python manage.py --no-input
+    echo "--------------unittest start--------------"
