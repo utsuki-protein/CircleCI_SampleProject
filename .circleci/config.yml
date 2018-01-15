@@ -2,16 +2,16 @@ version: 2.0
 
 jobs:
   build:
-      machine:
+      docker:
         - image: circleci/python:3.6.1
       steps:
-        - run: echo build step
+        - run: echo build
   test:
       docker:
         - image: circleci/python:3.6.1
       steps:
         - checkout
-        - run: echo test step
+        - run: echo test
 
 workflow:
   version: 2
