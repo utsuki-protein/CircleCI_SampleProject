@@ -17,13 +17,11 @@ def multiplication(a, b):
 
 
 def division(a, b):
-    c = a / b
-    """
+    # c = a / b
     try:
         c = a / b
     except ZeroDivisionError as e:
         c = 99999
     except Exception as e:
         c = 99999
-    """
     return c
