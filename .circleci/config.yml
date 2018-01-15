@@ -6,7 +6,7 @@ jobs:
         - image: circleci/python:3.6.1
       steps:
         - checkout
-        - run: echo build
+        - run: echo ["build step"]
         - run: python ./manage.py
 
 workflow:
