@@ -24,4 +24,4 @@ def division(a, b):
     #     c = 99999
     # except Exception as e:
     #     c = 99999
-    # return c
+    return c
