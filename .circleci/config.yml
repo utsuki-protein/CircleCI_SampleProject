@@ -2,20 +2,21 @@ version: 2.0
 
 jobs:
   build:
-    machine:
-      python:
-        version: 3.6.1
+      machine:
+        - image: circleci/python:3.6.1
+      steps:
+        run: echo "build step"
+  test:
+      machine:
+        - image: circleci/python:3.6.1
+      steps:
+        run: echo "test step"
 
-    general:
-      branches:
-        only:
-          - master
-
-    test:
-      pre:
-        echo "--------------unittest start--------------"
-      override:
-        # - ./manage.py; python manage.py
-        echo "--------------test running--------------"
-      post:
-        echo "--------------unittest start--------------"
+workflow:
+  version: 2.0
+  build_and_test:
+    jobs:
+      - build
+      - test
+        requires:
+          build
