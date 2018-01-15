@@ -1,20 +1,21 @@
 version: 2.0
 
 jobs:
-  machine:
-    python:
-      version: 3.6.1
+  build:
+    machine:
+      python:
+        version: 3.6.1
 
-  general:
-    branches:
-      only:
-        - master
+    general:
+      branches:
+        only:
+          - master
 
-  test:
-    pre:
-      echo "--------------unittest start--------------"
-    override:
-      # - ./manage.py; python manage.py
-      echo "--------------test running--------------"
-    post:
-      echo "--------------unittest start--------------"
+    test:
+      pre:
+        echo "--------------unittest start--------------"
+      override:
+        # - ./manage.py; python manage.py
+        echo "--------------test running--------------"
+      post:
+        echo "--------------unittest start--------------"
