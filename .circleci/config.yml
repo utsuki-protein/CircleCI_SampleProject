@@ -6,16 +6,21 @@ jobs:
         - image: circleci/python:3.6.1
       steps:
         - checkout
-        - run: echo build step
+        - run:
+          name: echo
+          command: echo build step
   test:
       docker:
         - image: circleci/python:3.6.1
       steps:
         - checkout
-        - run: echo test step
+        - run:
+          name: echo
+          command: echo test step
 
 workflow:
   version: 2
   build_and_test:
     jobs:
+      - build
       - test
