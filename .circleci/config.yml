@@ -5,13 +5,14 @@ jobs:
       docker:
         - image: circleci/python:3.6.1
       steps:
-        - run: echo build
+        - checkout
+        - run: echo build step
   test:
       docker:
         - image: circleci/python:3.6.1
       steps:
         - checkout
-        - run: echo test
+        - run: echo test step
 
 workflow:
   version: 2
