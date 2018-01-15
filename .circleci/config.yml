@@ -13,10 +13,7 @@ jobs:
         run: echo "test step"
 
 workflow:
-  version: 2.0
+  version: 2
   build_and_test:
     jobs:
-      - build
       - test
-        requires:
-          build
